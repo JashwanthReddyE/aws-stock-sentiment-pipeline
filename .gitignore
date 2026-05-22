@@ -1,0 +1,38 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+.pytest_cache/
+
+# --- Terraform (state + locks live locally, NEVER in git) ---
+**/.terraform/
+**/.terraform.lock.hcl
+**/terraform.tfstate
+**/terraform.tfstate.*
+**/.terraform.tfstate.lock.info
+# tfvars hold API keys — only the example template is committed
+**/terraform.tfvars
+!**/terraform.tfvars.example
+
+# --- Build artifacts (rebuilt by build-lambdas.ps1 / build-layers.* scripts) ---
+infra/build/
+layers/*.zip
+layers/.stage-*
+
+# --- Debug / test output (AWS CLI invoke dumps, ad-hoc S3 downloads) ---
+*.parquet
+infra/*.json
+!infra/*.tf.json
+forecast.parquet
+forecast_out.json
+out.json
+aapl_bronze.json
+
+# --- IDE / OS ---
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
