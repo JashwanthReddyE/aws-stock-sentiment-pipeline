@@ -133,6 +133,10 @@ Run locally with Streamlit (see [Running it yourself](#running-it-yourself)). Th
 3. **AI Forecast & Brief** — 5-day forecast with 95% confidence band + Claude's plain-English daily market brief
 
 > Screenshots: see [`docs/screenshots/`](docs/screenshots/) (add yours after running the pipeline). The Streamlit container is Dockerized — [`dashboard/Dockerfile`](dashboard/Dockerfile) — and ready to deploy to AWS App Runner if you want a public URL.
+>
+> | Live Prices | Sentiment Heatmap | AI Forecast & Brief |
+|---|---|---|
+| ![prices](docs/screenshots/live-prices.png) | ![heatmap](docs/screenshots/sentiment-heatmap.png) | ![forecast](docs/screenshots/ai-forecast-brief.png) |
 
 ---
 
