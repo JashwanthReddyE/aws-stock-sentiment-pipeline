@@ -28,6 +28,7 @@ def test_enrich_processes_object(monkeypatch):
     }
     s3.put_object(Bucket="bronze", Key="dt=2026-05-21/hh=13/AAPL_20260521T133000Z.json", Body=json.dumps(raw))
 
+    monkeypatch.setenv("BRONZE_BUCKET", "bronze")
     monkeypatch.setenv("SILVER_BUCKET", "silver")
     monkeypatch.setenv("BEDROCK_MODEL_ID", "test-model")
 
